@@ -1,6 +1,7 @@
 # JPA
 
 
+
 객체그래프
 1.(O)
 -> 다른 연관관계를 참조할때 N+1 발생
@@ -26,11 +27,17 @@
 -> 다른 연관관계를 참조할때 N+1 발생
  return queryFactory
                 .select(company) -> select는 company
+		
                 .from(joinCompany) -> from은 joinCompany
+		
                 .join(joinCompany.company, company).fetch join()
+		
                 .where(joinCompany.member.id.eq(workerId)
+		
                         .and(joinCompany.accept.eq(accept)))
+			
                 .orderBy(company.name.asc())
+		
                 .fetch();
 
 	=>객체그래프가 맞지않음
