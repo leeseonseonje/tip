@@ -10,6 +10,7 @@
 	-> fetch join 활용
 	
 queryFactory
+
 	.select(joinCompany)
 		
 	.from(joinCompany)
@@ -31,6 +32,7 @@ queryFactory
 -> 다른 연관관계를 참조할때 N+1 발생
 
 queryFactory
+
 	.select(company) -> select는 company
 		
 	.from(joinCompany) -> from은 joinCompany
