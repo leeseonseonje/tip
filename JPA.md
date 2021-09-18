@@ -7,7 +7,6 @@
 1.(O)
 
 -> 다른 연관관계를 참조할때 N+1 발생
-
 	-> fetch join 활용
 	
 queryFactory
@@ -49,7 +48,6 @@ queryFactory
 	.fetch();
 
 	=>객체그래프가 맞지않음
-	
 		->fetch join을 사용하면 에러가남(1번예 사용해서 객체 그래프 탐색)
 
 
