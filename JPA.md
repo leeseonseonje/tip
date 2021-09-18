@@ -7,12 +7,19 @@
 	-> fetch join 활용
  return queryFactory
                 .select(joinCompany)
+		
                 .from(joinCompany)
+		
                 .join(joinCompany.company, company).fetchJoin()
+		
 	   .join(joinCompany.member, member).fetchJoin()
+	   
                 .where(joinCompany.member.id.eq(workerId)
+		
                         .and(joinCompany.accept.eq(accept)))
+			
                 .orderBy(company.name.asc())
+		
                 .fetch();
 
 2.(X)
